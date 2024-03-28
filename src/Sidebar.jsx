@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import * as icons from "./assets/icons/icons.js";
 
 const Sidebar = ({ isSidebarOpen }) => {
@@ -11,7 +12,7 @@ const Sidebar = ({ isSidebarOpen }) => {
     >
       <ul className={`py-4 ${isSidebarOpen ? "sidebar-open" : ""}`}>
         <li>
-          <a href="/" className="py-2 px-4 flex items-center" id="nav-home">
+          <Link to="/" className="py-2 px-4 flex items-center" id="nav-home">
             <div className="flex items-center">
               <img
                 src={icons.homeIcon}
@@ -20,7 +21,7 @@ const Sidebar = ({ isSidebarOpen }) => {
               />
               <span>Home</span>
             </div>
-          </a>
+          </Link>
         </li>
         <li className="separator">
           <hr className="plain-horizontal-divider" />
@@ -28,8 +29,8 @@ const Sidebar = ({ isSidebarOpen }) => {
           <hr className="border-gray-700 mx-4 mt-2" />
         </li>
         <li>
-          <a
-            href="./news"
+          <Link
+            to="/news"
             className="py-2 px-4 flex items-center"
             id="subnav-news"
           >
@@ -41,11 +42,11 @@ const Sidebar = ({ isSidebarOpen }) => {
               />
               News
             </div>
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="./guides"
+          <Link
+            to="/guides"
             className="py-2 px-4 hover:bg-gray-800 flex items-center"
             id="subnav-guides"
           >
@@ -57,12 +58,12 @@ const Sidebar = ({ isSidebarOpen }) => {
               />
               Guides
             </div>
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="./encyclopedia"
-            className=" py-2 px-4 hover:bg-gray-800 flex items-center"
+          <Link
+            to="/encyclopedia"
+            className="py-2 px-4 hover:bg-gray-800 flex items-center"
             id="subnav-encyclopedia"
           >
             <div className="flex items-center">
@@ -73,7 +74,7 @@ const Sidebar = ({ isSidebarOpen }) => {
               />
               Encyclopedia
             </div>
-          </a>
+          </Link>
         </li>
       </ul>
       <ul className="py-4">
@@ -115,7 +116,6 @@ const Sidebar = ({ isSidebarOpen }) => {
           </a>
         </li>
       </ul>
-
       <hr className="vertical-divider" />
     </nav>
   );

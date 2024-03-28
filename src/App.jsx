@@ -40,12 +40,9 @@ const App = () => {
     <Router basename="/new-Chrono-Guide">
       <div className="flex flex-col h-screen">
         <TopNavigation toggleSidebar={toggleSidebar} />
-
         <hr className="horizontal-divider" />
-
         <div className="flex flex-1 overflow-hidden">
           <Sidebar isSidebarOpen={isSidebarOpen} />
-
           <div className="flex-1 overflow-y-auto" id="main-content-wrapper">
             <Routes>
               <Route
@@ -68,7 +65,6 @@ const App = () => {
             </Routes>
           </div>
         </div>
-
         <footer className="bg-gray-900 text-white py-4 text-center" id="footer">
           &copy; 2024 Chrono Guide
           <span className="mx-4">|</span>
