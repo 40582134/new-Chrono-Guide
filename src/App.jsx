@@ -37,7 +37,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/new-Chrono-Guide">
       <div className="flex flex-col h-screen">
         <TopNavigation toggleSidebar={toggleSidebar} />
 

@@ -1,8 +1,10 @@
+import heinImage from "../../assets/characterImgs/hein.png";
+
 const characters = [
   {
     id: 1,
     name: "Hein",
-    image: "../../assets/characterImgs/hein.png",
+    image: heinImage,
     description:
       "Hein is a one track minded damage dealer that capitalises on debuffs and hp lost to clear the field before getting overwhelmed himself",
     strengths: ["High burst damage", "Good AOE", "High HP Pool"],

@@ -1,9 +1,12 @@
+import tearUpImage from "../../assets/skillsImgs/tear-Up.png";
+import mutilateImage from "../../assets/skillsImgs/mutilate.png";
+
 const skills = [
   {
     id: 1,
     character: "Hein",
     name: "Tear Up",
-    image: "../../assets/skillsImgs/tear-Up.png",
+    image: tearUpImage,
     targetting: "Single Enemy",
     cost: "Cost: 1 mana",
     stats01: "Damage: 15 - Accuracy: 84% - Critical Hit: 0%.",
@@ -19,7 +22,7 @@ const skills = [
     id: 2,
     character: "Hein",
     name: "Mutilate",
-    image: "../../assets/skillsImgs/mutilate.png",
+    image: mutilateImage,
     targetting: "Random Enemy",
     cost: "x mana",
     stats01: "Damage: 27 - Accuracy: 96% - Critical Hit: 0%.",
@@ -31,7 +34,7 @@ const skills = [
     id: 3,
     character: "Hein",
     name: "Identify Weakness",
-    image: "../../assets/skillsImgs/identify-Weakness.png",
+    image: `${import.meta.env.BASE_URL}assets/skillsImgs/identify-Weakness.png`,
     targetting: "Single Enemy",
     cost: "x mana",
     stats02: "Debuff Success: 150% - Stacks inflicted: (2/2)",
@@ -46,7 +49,7 @@ const skills = [
     id: 4,
     character: "Hein",
     name: "Assault Slash",
-    image: "../../assets/skillsImgs/assault-Slash.png",
+    image: `${import.meta.env.BASE_URL}assets/skillsImgs/assault-Slash.png`,
     targetting: "All Enemies",
     cost: "x mana",
     stats01: "Damage: 18 - Accuracy: 80% - critical Hit: -10%",
@@ -60,7 +63,7 @@ const skills = [
     id: 5,
     character: "Hein",
     name: "Intimidation",
-    image: "../../assets/skillsImgs/",
+    image: `${import.meta.env.BASE_URL}assets/skillsImgs/`,
     targetting: "All Enemies",
     cost: "x mana",
     stats01: "Damage: 5 - Accuracy: 102% - critical Hit: 0%",
@@ -73,7 +76,7 @@ const skills = [
     id: 6,
     character: "Hein",
     name: "Blood Reflux",
-    image: "../../assets/skillsImgs/",
+    image: `${import.meta.env.BASE_URL}assets/skillsImgs/`,
     targetting: "Other Ally",
     cost: "x mana",
     stats01:
@@ -99,4 +102,5 @@ const skills = [
     ],
   },
 ];
+
 export default skills;

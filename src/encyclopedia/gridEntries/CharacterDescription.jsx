@@ -37,9 +37,7 @@ const CharacterDescription = ({
   return (
     <div className="character-description">
       <div className="character-portrait">
-        {characterImage && (
-          <img src={characterImage} alt={selectedCharacter.name} />
-        )}
+        <img src={selectedCharacter.image} alt={selectedCharacter.name} />
       </div>
       <div className="character-synergies-description">
         <h4>Synergies</h4>

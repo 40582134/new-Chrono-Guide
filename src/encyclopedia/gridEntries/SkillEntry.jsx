@@ -25,7 +25,7 @@ const SkillEntry = ({
       onClick={() => handleSkillClick(skill)}
     >
       <div className="skill-image">
-        {skillImage && <img src={skillImage} alt={skill.name} />}
+        <img src={skill.image} alt={skill.name} />
       </div>
       <h3 className="grid-skill-title">{skill.name}</h3>
       <div className="skill-synergies">

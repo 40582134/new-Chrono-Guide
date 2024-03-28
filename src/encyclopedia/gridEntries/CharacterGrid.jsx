@@ -36,9 +36,7 @@ const CharacterGrid = ({
           onClick={() => handleCharacterClick(character)}
         >
           <div className="character-image">
-            {characterImages[character.id] && (
-              <img src={characterImages[character.id]} alt={character.name} />
-            )}
+            <img src={character.image} alt={character.name} />
           </div>
           <h3>{character.name}</h3>
           <div className="character-synergies-grid">
