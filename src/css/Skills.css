@@ -12,12 +12,10 @@ h2.skill-title {
   margin-bottom: 20px;
 }
 
-img.skill-portrait {
+img.skills-description-img {
+  margin-top: 10px;
   border-radius: 10%;
-}
-
-img div.skill-portrait {
-  border-radius: 30%;
+  max-width: 550px;
 }
 
 .main-skills {
@@ -79,12 +77,6 @@ p.skill-stats {
 }
 p.hoverable-skills-details {
   margin-bottom: 4px;
-}
-
-.skill-synergies {
-  display: flex;
-  justify-content: start;
-  margin-top: 15px;
 }
 
 .skill-item {
@@ -198,9 +190,11 @@ hr.skillz.horizontal-divider {
 
 .skill-synergies {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-wrap: wrap;
   flex-direction: row;
+  margin-top: 15px;
+  in-bottom: 8px;
 }
 
 .synergy-tag {

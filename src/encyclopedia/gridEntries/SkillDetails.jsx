@@ -1,5 +1,5 @@
 // ../src/encyclopedia/gridEntries/SkillDetails.jsx
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const SkillDetails = ({
   selectedSkill,
@@ -9,16 +9,6 @@ const SkillDetails = ({
   setHoveredTerm,
   renderCastEffect,
 }) => {
-  const [skillImage, setSkillImage] = useState(null);
-
-  useEffect(() => {
-    if (selectedSkill) {
-      import(`${selectedSkill.image}`).then((image) => {
-        setSkillImage(image.default);
-      });
-    }
-  }, [selectedSkill]);
-
   if (!selectedSkill) {
     return null;
   }
@@ -166,13 +156,13 @@ const SkillDetails = ({
     <div className="skill-description">
       <h2 className="skill-title">{selectedSkill.name}</h2>
       <div className="skill-portrait-row">
-        {skillImage && (
+        <div className="skill-portrait">
           <img
-            className="skill-portrait"
-            src={skillImage}
+            className="skills-description-img"
+            src={selectedSkill.image}
             alt={selectedSkill.name}
           />
-        )}
+        </div>
       </div>
       <div className="skill-details">
         <p className="targetting">{selectedSkill.targetting}</p>
