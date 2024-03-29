@@ -32,7 +32,9 @@ const SkillEntry = ({
         {skill.synergies.map((synergy, index) => (
           <span
             key={index}
-            className={`synergy-tag ${activeSynergies.includes(synergy) ? "active" : ""}`}
+            className={`synergy-tag ${
+              activeSynergies.includes(synergy) ? "active" : ""
+            }`}
             onClick={(e) => {
               e.stopPropagation();
               handleSynergyClick(synergy);

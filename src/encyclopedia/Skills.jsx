@@ -1,5 +1,4 @@
-// ../src/encyclopedia/Skills.jsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Breadcrumbs from "../Breadcrumbs";
 import mainBanner from "../assets/banners/mainBanner.png";
 import SkillEntry from "./gridEntries/SkillEntry";
@@ -12,6 +11,9 @@ const Skills = () => {
   const [activeSynergies, setActiveSynergies] = useState([]);
   const [synergySuggestions, setSynergySuggestions] = useState([]);
   const [hoveredTerm, setHoveredTerm] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const entriesPerPage = 20;
+  const skillsSectionTitleRef = useRef(null);
 
   // Filter skills based on search term and active synergies
   const filteredSkills = skills.filter((skill) => {
@@ -24,8 +26,20 @@ const Skills = () => {
     return nameMatch && synergyMatch;
   });
 
+  // Calculate total pages
+  const totalPages = Math.ceil(filteredSkills.length / entriesPerPage);
+
+  // Get current page entries
+  const indexOfLastEntry = currentPage * entriesPerPage;
+  const indexOfFirstEntry = indexOfLastEntry - entriesPerPage;
+  const currentEntries = filteredSkills.slice(
+    indexOfFirstEntry,
+    indexOfLastEntry
+  );
+
   const handleSkillClick = (skill) => {
     setSelectedSkill(skill);
+    skillsSectionTitleRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleSynergyClick = (synergy) => {
@@ -87,6 +101,11 @@ const Skills = () => {
     );
   };
 
+  // Change page
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <main className="main-skills">
       <div className="skills">
@@ -94,7 +113,9 @@ const Skills = () => {
         <div className="banner-image">
           <img src={mainBanner} alt="Banner" />
         </div>
-        <h2 className="skills-section-title">Skills</h2>
+        <h2 className="skills-section-title" ref={skillsSectionTitleRef}>
+          Skills
+        </h2>
 
         <SkillDetails
           selectedSkill={selectedSkill}
@@ -143,7 +164,7 @@ const Skills = () => {
           </div>
 
           <div className="skill-grid">
-            {filteredSkills.map((skill) => (
+            {currentEntries.map((skill) => (
               <SkillEntry
                 key={skill.id}
                 skill={skill}
@@ -152,6 +173,28 @@ const Skills = () => {
                 handleSynergyClick={handleSynergyClick}
               />
             ))}
+          </div>
+          <div className="pagination">
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              &lt;
+            </button>
+            <input
+              type="number"
+              value={currentPage}
+              onChange={(e) => handlePageChange(Number(e.target.value))}
+              min="1"
+              max={totalPages}
+            />
+            <span>/ {totalPages}</span>
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+            >
+              &gt;
+            </button>
           </div>
         </div>
       </div>

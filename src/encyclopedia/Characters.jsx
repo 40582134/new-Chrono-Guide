@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Breadcrumbs from "../Breadcrumbs";
 import mainBanner from "../assets/banners/mainBanner.png";
 import SkillModal from "./gridEntries/SkillModal";
@@ -16,6 +16,7 @@ const Characters = () => {
   const [currentSkillPage, setCurrentSkillPage] = useState(1);
   const skillsPerPage = 8;
   const [characterImage, setCharacterImage] = useState(null);
+  const charactersTitleRef = useRef(null);
 
   const filteredCharacters = characters.filter((character) => {
     const nameMatch = character.name
@@ -45,6 +46,8 @@ const Characters = () => {
       .catch((error) => {
         console.error(`Failed to load image: ${character.image}`, error);
       });
+
+    charactersTitleRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleSynergyClick = (synergy) => {
@@ -162,7 +165,9 @@ const Characters = () => {
         <div className="banner-image">
           <img src={mainBanner} alt="Banner" />
         </div>
-        <h2 className="characters-title">Characters</h2>
+        <h2 className="characters-title" ref={charactersTitleRef}>
+          Characters
+        </h2>
         <CharacterDescription
           selectedCharacter={selectedCharacter}
           characterImage={characterImage}

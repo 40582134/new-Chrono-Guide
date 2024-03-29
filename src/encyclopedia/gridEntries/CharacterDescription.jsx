@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import skills from "./SkillsData";
 
 const CharacterDescription = ({
@@ -9,7 +9,6 @@ const CharacterDescription = ({
   handleSkillClick,
 }) => {
   const [characterImage, setCharacterImage] = useState(null);
-  const characterTitleRef = useRef(null);
 
   useEffect(() => {
     if (selectedCharacter) {
@@ -23,8 +22,6 @@ const CharacterDescription = ({
             error
           );
         });
-
-      characterTitleRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [selectedCharacter]);
 
@@ -58,7 +55,7 @@ const CharacterDescription = ({
         </ul>
       </div>
       <div className="character-details">
-        <h3 ref={characterTitleRef}>{selectedCharacter.name}</h3>
+        <h3>{selectedCharacter.name}</h3>
         <p>{selectedCharacter.description}</p>
         <div className="character-strengths">
           <h4>Strengths</h4>

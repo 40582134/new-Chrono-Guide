@@ -209,3 +209,45 @@ hr.skillz.horizontal-divider {
 .synergy-tag.active {
   background-color: var(--decorative-color-hover);
 }
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--text-color);
+  padding: 8px 16px;
+  margin: 0 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: var(--decorative-color-hover);
+}
+
+.pagination button:disabled {
+  background-color: var(--secondary-color);
+  cursor: not-allowed;
+}
+
+.pagination input {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 6px 10px;
+  margin: 0 8px;
+  border-radius: 4px;
+  width: 60px;
+  text-align: center;
+}
+
+.pagination span {
+  color: var(--text-color);
+}

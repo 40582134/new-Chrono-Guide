@@ -30,6 +30,7 @@ const SkillDetails = ({
               key !== "castEffectLine01" &&
               key !== "castEffectLine02" &&
               key !== "castEffectLine03" &&
+              key !== "castEffectLine04" &&
               key !== "synergies"
           )
           .map(([key, value]) => (
@@ -58,7 +59,7 @@ const SkillDetails = ({
             </p>
           </div>
         )}
-        {hoveredTerm === "Cannot be fixed" && (
+        {hoveredTerm === "CannotBeFixed" && (
           <div className="term-explanation">
             <p>
               Cannot be fixed: Cast Illusion Sword skills on all enemies equal
@@ -77,16 +78,22 @@ const SkillDetails = ({
         {hoveredTerm === "DetectWeakness" && (
           <div className="term-explanation">
             <p>
-              Armour: -38% - Evade: - 15% | All stacks of this debuff are
-              removed when the afflicated receives an attack
+              Debuff Per Stack: Armour: -19% - Evade: - 7.5% | All stacks of
+              this debuff are removed when the afflicated receives an attack
             </p>
+          </div>
+        )}
+        {hoveredTerm === "EvadeReduced" && (
+          <div className="term-explanation">
+            <p>Debuff Per Stack: Evade: -4% | Active for three turns</p>
           </div>
         )}
         {hoveredTerm === "Fear" && (
           <div className="term-explanation">
             <p>
-              Armour: -10 - Evade: -10% - Speed: -1 - Receiving Critical Chance
-              +15% | This debuff is active for three turns 3
+              Debuff Per Stack: Armour: -10 - Evade: -10% - Speed: -1 -
+              Receiving Critical Chance +15% | This debuff is active for three
+              turns 3
             </p>
           </div>
         )}
@@ -186,6 +193,7 @@ const SkillDetails = ({
         <p className="cast-effect">{selectedSkill.castEffectLine01}</p>
         <p className="cast-effect">{selectedSkill.castEffectLine02}</p>
         <p className="cast-effect">{selectedSkill.castEffectLine03}</p>
+        <p className="cast-effect">{selectedSkill.castEffectLine04}</p>
         {renderTermExplanations()}
       </div>
     </div>
