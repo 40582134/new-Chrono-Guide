@@ -194,7 +194,7 @@ hr.skillz.horizontal-divider {
   flex-wrap: wrap;
   flex-direction: row;
   margin-top: 15px;
-  in-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .synergy-tag {

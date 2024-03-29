@@ -85,7 +85,8 @@ const Sidebar = ({ isSidebarOpen }) => {
         </li>
         <li>
           <a
-            href="#"
+            href="https://store.steampowered.com/app/1188930/Chrono_Ark/?l=english&curator_clanid=9730205"
+            target="_blank"
             className="py-2 px-4 hover:bg-gray-800 flex items-center"
             id="nav-steam"
           >
@@ -101,7 +102,8 @@ const Sidebar = ({ isSidebarOpen }) => {
         </li>
         <li>
           <a
-            href="#"
+            href="https://discord.gg/dhDWB4Xh"
+            target="_blank"
             className="py-2 px-4 hover:bg-gray-800 flex items-center"
             id="nav-discord"
           >

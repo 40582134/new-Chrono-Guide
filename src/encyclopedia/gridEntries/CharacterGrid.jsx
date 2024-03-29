@@ -23,7 +23,6 @@ const CharacterGrid = ({
       );
       setCharacterImages(Object.assign({}, ...images));
     };
-
     loadImages();
   }, [filteredCharacters]);
 
