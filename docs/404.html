@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Single Page Apps for GitHub Pages</title>
+    <script type="text/javascript">
+      var segmentCount = 1;
+      var l = window.location;
+      var repoName = "/new-Chrono-Guide";
+
+      var path = l.pathname.slice(repoName.length + 1);
+      if (path.indexOf(".") !== -1) {
+        // If the path contains a dot, it's likely a file, so don't redirect
+        console.log("File request, not redirecting.");
+      } else {
+        // Otherwise, redirect to the appropriate path
+        l.replace(
+          l.protocol + "//" + l.hostname + (l.port ? ":" + l.port : "") +
+          repoName + "/" +
+          path +
+          (l.search ? "&" + l.search.slice(1) : "") +
+          l.hash
+        );
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
