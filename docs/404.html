@@ -1,13 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Single Page Apps for GitHub Pages</title>
     <script type="text/javascript">
-      var segmentCount = 0;
+      var segmentCount = 1;
       var l = window.location;
+      var repoName = "/new-Chrono-Guide";
       l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.protocol + "//" + l.hostname + (l.port ? ":" + l.port : "") +
         l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?/' +
         l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
         (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
@@ -15,6 +16,5 @@
       );
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
