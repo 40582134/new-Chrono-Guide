@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/new-Chrono-Guide/",
+  base: "/Chrono-Guide-Vercel-Patch-P/",
   build: {
     outDir: "docs",
   },
