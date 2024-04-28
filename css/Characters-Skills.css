@@ -1,0 +1,540 @@
+.main-characters {
+  max-width: 1260px;
+}
+
+/* _______ Character Description Section - Left Column _______ */
+
+.characters {
+  padding: 20px;
+  width: 1200px;
+}
+
+.characters-title {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  color: var(--decorative-color);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.character-description {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.character-portrait {
+  width: 30%;
+}
+
+.character-portrait img {
+  max-width: 280px;
+  max-height: 330px;
+  border: 4px solid var(--negative-color);
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* _______ Character Description Section - Miidle Column _______ */
+
+.character-skills {
+  width: 40%;
+  padding: 0 2rem;
+}
+
+.character-skills h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.character-skills ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.character-skills li {
+  margin-bottom: 1rem;
+}
+
+.character-skills h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skill-item {
+  min-width: 200px;
+  min-height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: scale(0.95);
+}
+
+.skill-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.skill-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-arrow {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-arrow:disabled {
+  background-color: var(--secondary-color);
+  cursor: not-allowed;
+}
+
+.skill-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--secondary-color);
+  border: 2px solid var(--decorative-color);
+  border-radius: 10px;
+  padding: 2rem;
+  outline: none;
+  width: 400px;
+  max-width: 90%;
+}
+
+.skill-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.skill-modal-content {
+  color: var(--text-color);
+}
+
+.skill-modal-content h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.skill-modal-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skill-modal-content button {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.character-skills .skill-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
+}
+
+.character-skills .skill-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.character-skills .skill-item {
+  flex: 1;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.character-skills .skill-item:last-child {
+  margin-right: 0;
+}
+
+.character-skills {
+  display: flex;
+  width: 40%;
+  padding: 0rem;
+  margin-right: 4rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* _______ Charactern Description Section - Rght Column _______ */
+
+.synergy-tag-grid.active {
+  background-color: var(--decorative-color-hover);
+}
+
+.character-details {
+  width: 35%;
+  color: var(--text-color-secondary);
+}
+
+.character-details h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.character-details p {
+  margin-bottom: 1rem;
+}
+
+.character-strengths,
+.character-weaknesses {
+  margin-bottom: 1rem;
+}
+
+.character-strengths h4,
+.character-weaknesses h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.character-strengths ul,
+.character-weaknesses ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.character-synergies-description {
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  max-width: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.character-synergies-description h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+}
+.character-synergies-description ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.character-synergies-description li {
+  margin-top: 15px;
+}
+
+.synergy-button-description.active {
+  background-color: var(--decorative-color-hover);
+}
+
+.character-grid-section {
+  margin-top: 2rem;
+}
+
+/* _______ Search _______ */
+
+.search-bar-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.character.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+}
+
+/* _______ Synergy _______ */
+
+.synergy-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.synergy-suggestions li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.synergy-suggestions li:hover {
+  background-color: var(--accent-color);
+}
+
+.active-synergies {
+  margin-top: 20px;
+  display: flex;
+  margin-left: 1rem;
+}
+
+.active-synergy {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.active-synergy:hover {
+  transform: scale(0.9);
+}
+
+.remove-synergy {
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+/* _______ Character Grid _______ */
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.4rem;
+}
+
+.character-item {
+  border: 2px solid var(--decorative-color);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+  padding: 1rem;
+  text-align: center;
+}
+
+.character-item:hover {
+  transform: scale(0.95);
+  border-color: var(--accent-color);
+}
+
+.character-image {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.character-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15%;
+}
+
+.character-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.synergy-tag {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.character-description {
+  display: flex;
+  margin-bottom: 2rem;
+  animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.synergy-button-description {
+  background-color: var(--accent-color-secondary);
+  color: var(--text-color);
+  font-size: 0.75rem;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.synergy-button-description:hover {
+  transform: scale(0.9);
+}
+
+.synergy-button-description.active {
+  background-color: var(--decorative-color-hover);
+}
+
+.synergy-tag-grid {
+  background-color: var(--accent-color-secondary);
+  color: var(--text-color);
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.synergy-tag:hover {
+  transform: scale(0.9);
+}
+.synergy-tag-grid:hover {
+  transform: scale(0.9);
+  background-color: var(--decorative-color-hover);
+}
+.synergy-tag-grid:active {
+  background-color: var(--decorative-color-hover);
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+}
+
+.synergy-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.synergy-suggestions li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.synergy-suggestions li:hover {
+  background-color: var(--accent-color);
+}
+
+div.character-synergies-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+  .characters {
+    width: 100%;
+  }
+
+  .character-description {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .character-portrait,
+  .character-skills,
+  .character-details {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .character-synergies-description {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .character-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .character-details h3 {
+    font-size: 1.6rem;
+  }
+
+  .character-strengths h4,
+  .character-weaknesses h4 {
+    font-size: 0.9rem;
+  }
+}
