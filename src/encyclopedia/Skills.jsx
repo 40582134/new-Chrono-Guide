@@ -15,15 +15,18 @@ const Skills = () => {
   const entriesPerPage = 20;
   const skillsSectionTitleRef = useRef(null);
 
-  // Filter skills based on search term and active synergies
+  // Filter skills based on search term, character, and active synergies
   const filteredSkills = skills.filter((skill) => {
     const nameMatch = skill.name
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase());
+    const characterMatch = skill.character
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
     const synergyMatch = activeSynergies.every((synergy) =>
       skill.synergies.includes(synergy)
     );
-    return nameMatch && synergyMatch;
+    return (nameMatch || characterMatch) && synergyMatch;
   });
 
   // Calculate total pages
@@ -47,12 +50,14 @@ const Skills = () => {
       setActiveSynergies(activeSynergies.filter((s) => s !== synergy));
     } else {
       setActiveSynergies([...activeSynergies, synergy]);
+      setCurrentPage(1); // Reset to the first page when a synergy tag is added
     }
   };
 
   const handleSearchChange = (e) => {
     const value = e.target.value;
     setSearchTerm(value);
+    setCurrentPage(1); // Reset to the first page when the search term changes
 
     if (value === "") {
       setSynergySuggestions([]);
@@ -76,6 +81,7 @@ const Skills = () => {
     setSynergySuggestions([]);
     if (!activeSynergies.includes(suggestion)) {
       setActiveSynergies([...activeSynergies, suggestion]);
+      setCurrentPage(1); // Reset to the first page when a synergy suggestion is clicked
     }
   };
 

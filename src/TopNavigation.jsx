@@ -2,14 +2,14 @@ import React from "react";
 
 const TopNavigation = ({ toggleSidebar }) => {
   return (
-    <header className="flex justify-between items-center px-4 py-2" id="header">
-      <div className="flex">
+    <header className="header" id="header">
+      <div className="header-left">
         <button
-          className="block md:hidden focus:outline-none"
+          className="hamburger-button show-below-1601"
           onClick={toggleSidebar}
         >
           <svg
-            className="h-6 w-6 fill-current"
+            className="hamburger-icon"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
             id="hamburger-icon"
@@ -18,9 +18,10 @@ const TopNavigation = ({ toggleSidebar }) => {
           </svg>
         </button>
       </div>
-      <div className="flex justify-center flex-grow">
+      <div className="header-center">
         <h1 id="site-title">Chrono Guide</h1>
       </div>
+      <div className="header-right"></div>
     </header>
   );
 };

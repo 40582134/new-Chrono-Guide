@@ -5,9 +5,12 @@
   --accent-color: rgb(73, 185, 197);
   --accent-color-secondary: rgba(18, 92, 100, 0.712);
   --negative-color: rgb(197, 14, 60);
+  --negative-color-modal: rgb(174, 151, 21);
   --decorative-color-hover: rgb(87, 7, 91);
   --text-color: #f4dfdf;
   --text-color-secondary: #afc8ee;
+  --text-color-secondary-alt: #bfced2;
+  --hover-explanation-color: #f4dfdf;
   --border-color: #374151;
   --separator-color: #ff9100;
 }
@@ -63,6 +66,36 @@ body {
   border-radius: 20px;
 }
 
+.bullet01 {
+  display: inline-block;
+  margin-right: 1px;
+  color: var(--text-color);
+}
+.bullet02 {
+  display: inline-block;
+  margin-right: 2px;
+  color: var(--text-color-secondary);
+}
+
+.modal-bullet01 {
+  display: block;
+  margin-left: 1em;
+  text-indent: -1em;
+  color: var(--text-color);
+}
+
+.modal-bullet01::before {
+  content: "*";
+  display: block;
+  margin-bottom: -0.9em;
+  color: var(--separator-color);
+}
+
+.modal-bullet01::after {
+  content: "";
+  display: block;
+  margin-top: -0.9em;
+}
 /* -------------------------------------------------------
 --------------------- Navigation -------------------------
 ------------------------------------------------------- */
@@ -105,10 +138,45 @@ header#header .header-right {
   fill: var(--accent-color);
   border-width: 1px;
   border-color: var(--accent-color);
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
   padding: 3px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  flex: 0 0 auto;
+}
+
+.header-center {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.header-right {
+  flex: 0 0 auto;
+}
+
+.hamburger-button {
+  background: none;
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger-icon {
+  width: 50px;
+  height: 50px;
+  fill: currentColor;
 }
 
 /* ___________ Sidebar Config__________*/
@@ -211,7 +279,7 @@ nav#sidebar a:hover {
   padding-top: 1px; /* Adjust this value to match the header height */
 }
 
-/* ___________ Sidebar Config__________*/
+/* ___________ Breadcrumb Config __________*/
 
 .breadcrumb {
   margin-bottom: 1.5rem;
@@ -289,7 +357,7 @@ main.sidebar-open {
   border-radius: 10px;
 }
 
-/* ________ Guides Page ______ */
+/* ________ Guide Page ______ */
 
 .guides-title {
   font-size: 2.5rem;
@@ -360,18 +428,8 @@ main.sidebar-open {
   background-color: var(--decorative-color-hover);
 }
 
-.search-bar {
-  margin-bottom: 2rem;
-}
-
-.search-bar input {
-  width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
-  color: var(--text-color);
-  background-color: var(--secondary-color);
+.guide-vid {
+  padding-bottom: 40px;
 }
 
 /* -------------------------------------------------------
@@ -456,7 +514,13 @@ hr.horizontal-divider:before {
 --------------------- Resonsiveness ----------------------
 ------------------------------------------------------- */
 
-@media (min-width: 801px) {
+@media (min-width: 1601px) {
+  #hide-the-burger {
+    display: none;
+  }
+}
+
+@media (min-width: 601px) {
   #sidebar {
     position: fixed;
     top: 72px;
@@ -477,7 +541,7 @@ hr.horizontal-divider:before {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   h1#site-title {
     font-size: 16px;
     max-width: 130px;
@@ -535,5 +599,11 @@ hr.horizontal-divider:before {
 
   .encyclopedia-section span {
     font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1601px) {
+  .show-below-1601 {
+    display: none;
   }
 }

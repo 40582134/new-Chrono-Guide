@@ -18,7 +18,7 @@ import "./css/Characters-Skills.css";
 import "./css/Skills.css";
 
 const App = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth > 767);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth > 1600);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -26,7 +26,7 @@ const App = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSidebarOpen(window.innerWidth > 767);
+      setIsSidebarOpen(window.innerWidth > 1600);
     };
 
     window.addEventListener("resize", handleResize);
@@ -37,7 +37,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router basename="/new-Chrono-Guide">
+    <Router>
       <div className="flex flex-col h-screen">
         <TopNavigation toggleSidebar={toggleSidebar} />
         <hr className="horizontal-divider" />

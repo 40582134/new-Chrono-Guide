@@ -24,7 +24,7 @@ img.skills-description-img {
 
 .skill-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 1.4rem;
 }
 
@@ -67,10 +67,6 @@ img.skills-description-img {
   margin-bottom: 0.5rem;
 }
 
-p.targetting {
-  color: var(--negative-color);
-  font-size: 1.4rem;
-}
 p.skill-stats {
   color: var(--text-color-secondary);
   margin-bottom: 2px;
@@ -128,6 +124,7 @@ hr.skillz.horizontal-divider {
 
 .term-explanation {
   margin-top: 30px;
+  font-style: italic;
 }
 
 .search-bar input {
@@ -250,4 +247,67 @@ hr.skillz.horizontal-divider {
 
 .pagination span {
   color: var(--text-color);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+  .main-skills {
+    max-width: 100%;
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  img.skills-description-img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills-section-title {
+    font-size: 3rem;
+    padding-bottom: 5px;
+  }
+
+  h2.skill-title {
+    font-size: 2rem;
+  }
+
+  .skill-item {
+    padding: 0.8rem;
+  }
+
+  .skill-item h3 {
+    font-size: 1rem;
+  }
+
+  p.targetting-skills {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills-section-title {
+    font-size: 2.5rem;
+  }
+
+  h2.skill-title {
+    display: flex;
+    font-size: 1.8rem;
+    justify-content: center;
+  }
+
+  .skill-item {
+    padding: 0.6rem;
+  }
+
+  .skill-item h3 {
+    font-size: 0.9rem;
+  }
+
+  p.targetting-skills {
+    font-size: 1rem;
+  }
 }

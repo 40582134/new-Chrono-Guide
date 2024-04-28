@@ -4,7 +4,6 @@ import sizzImage from "../../assets/characterImgs/sizz.png";
 import trishaImage from "../../assets/characterImgs/trisha.png";
 import missChainImage from "../../assets/characterImgs/miss-Chain.png";
 import azarImage from "../../assets/characterImgs/azar.png";
-
 import lianImage from "../../assets/characterImgs/lian.png";
 import phoenixImage from "../../assets/characterImgs/phoenix.png";
 import presselImage from "../../assets/characterImgs/pressel.png";
@@ -47,7 +46,7 @@ const characters = [
     name: "Joey",
     image: joeyImage,
     description:
-      "Joey is your generalist healer who provides AOE sustain while peppering enemies with useful debuffs such as intoxication and stun",
+      "Joey is your generalist healer who provides AOE sustain with his healing over time while peppering enemies with useful debuffs such as intoxication and stun",
     strengths: ["Great Aoe Healing", "Good offensive utility", "Self Reliant"],
     weaknesses: [
       "Lackluster damage output",

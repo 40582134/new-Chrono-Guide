@@ -498,3 +498,43 @@ div.character-synergies-grid {
   flex-wrap: wrap;
   flex-direction: row;
 }
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+  .characters {
+    width: 100%;
+  }
+
+  .character-description {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .character-portrait,
+  .character-skills,
+  .character-details {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .character-synergies-description {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .character-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .character-details h3 {
+    font-size: 1.6rem;
+  }
+
+  .character-strengths h4,
+  .character-weaknesses h4 {
+    font-size: 0.9rem;
+  }
+}

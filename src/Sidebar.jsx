@@ -30,22 +30,6 @@ const Sidebar = ({ isSidebarOpen }) => {
         </li>
         <li>
           <Link
-            to="/news"
-            className="py-2 px-4 flex items-center"
-            id="subnav-news"
-          >
-            <div className="flex items-center">
-              <img
-                src={icons.newsIcon}
-                alt="News"
-                className="w-4 h-4 mr-2 sidebar-svgs"
-              />
-              News
-            </div>
-          </Link>
-        </li>
-        <li>
-          <Link
             to="/guides"
             className="py-2 px-4 hover:bg-gray-800 flex items-center"
             id="subnav-guides"
@@ -56,7 +40,7 @@ const Sidebar = ({ isSidebarOpen }) => {
                 alt="Guides"
                 className="w-4 h-4 mr-2 sidebar-svgs"
               />
-              Guides
+              Site Guide
             </div>
           </Link>
         </li>
